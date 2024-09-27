@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'bulma/css/bulma.min.css';
+import './styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-solid-svg-icons';
 

@@ -1,0 +1,80 @@
+/* Fondo oscuro general */
+body, html {
+    background-color: #14161A;
+    color: #ffffff;
+    min-height: 100%;
+    font-family: 'Arial', sans-serif; /* Asegura una fuente legible */
+}
+
+/* Ajustar las cajas */
+.box {
+    background-color: #14161A;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    ;
+}
+
+/* Estilo para los inputs para que el texto sea visible */
+.input, .textarea {
+    background-color: #14161A;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+/* Colores en los botones */
+.button {
+    background-color: #3a3f47;
+    color: #ffffff;
+}
+
+.button.is-primary {
+    background-color: #4CAF50 !important;
+}
+
+.button.is-link {
+    background-color: #007BFF !important;
+}
+
+/* Ajustar el dropdown para que sea visible */
+.dropdown-item {
+    background-color: #14161A !important;
+    color: #ffffff !important;
+}
+
+/* Mejorar el diseño responsivo */
+@media (max-width: 768px) {
+    .columns {
+        display: block;
+    }
+    .column {
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para el título principal */
+h1.title {
+    color: #ffffff; /* Blanco puro para el título principal */
+    font-weight: bold; /* Negrita para resaltar el título */
+}
+
+/* Estilos para los subtítulos */
+h2.subtitle, h2.title {
+    color: #cfd8dc; /* Un gris claro para los subtítulos */
+    font-weight: normal; /* Peso de fuente normal */
+}
+
+/* Títulos en otras secciones */
+h3, h4, h5, h6 {
+    color: #ffffff; /* Blanco puro para otros títulos */
+}
+
+/* Para la sección "Acerca de" */
+.acerca-de p {
+    color: #cfd8dc; /* Texto en gris claro */
+}
+
+.acerca-de strong {
+    color: #ffffff; /* Texto resaltado en blanco */
+    font-weight: bold;
+}
