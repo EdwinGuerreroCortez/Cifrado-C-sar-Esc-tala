@@ -5,8 +5,27 @@ import { faCopy } from '@fortawesome/free-solid-svg-icons';
 
 function CopyIcon({ result, showNotification }) {
     const handleCopy = () => {
-        navigator.clipboard.writeText(result);
-        showNotification(); 
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(result)
+                .then(() => {
+                    showNotification();
+                })
+                .catch(err => {
+                    console.error("Error copiando al portapapeles: ", err);
+                });
+        } else {
+            const textArea = document.createElement("textarea");
+            textArea.value = result;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showNotification();
+            } catch (err) {
+                console.error("Error copiando con execCommand: ", err);
+            }
+            document.body.removeChild(textArea);
+        }
     };
 
     return (
@@ -22,6 +41,7 @@ function CopyIcon({ result, showNotification }) {
         </button>
     );
 }
+
 
 function Notification({ message, type, visible }) {
     return (
